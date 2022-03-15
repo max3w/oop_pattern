@@ -30,7 +30,7 @@ class Plus{
     /**
      * @return string
      */
-    public function pluss()
+    public function pluss($a,$b)
     {
         $a = $this->a;
         $b = $this->b;
@@ -39,6 +39,14 @@ class Plus{
         return $e;
 
     }
+}
+
+function pluss($a,$b)
+{
+    $c = $a + $b;
+    $e = 'Числа:'.$a.'+'.$b.'='.$c;
+    return $e;
+
 }
     //Создаем обьект из класса
     $eric = new Person(); //все свойства пока пусты
@@ -53,4 +61,6 @@ class Plus{
     //Создаем второй обьект с значениями по умолчанию
     $sum = new Plus;
     echo '<hr>';
-    echo $sum->pluss();
+    echo $sum->pluss(3,2);
+    echo '<hr>';
+    echo pluss(3,2);
