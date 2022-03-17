@@ -1,29 +1,37 @@
 <?php
 
 //Создаем класс
+
+/**
+ *
+ */
 class Product
 {
 //Наполняем значениями по умолчанию
 public $title = "Title";
 public $desk = "Desk";
 public $price = 100;
+
+//Функция вывода
+function getAll(){
+    return $this->title . $this->desk . $this->price . '<hr>';
+}
+//Добавляем конструктор и передаем в него все параметры
+function __construct($title,$desk,$price)
+{
+    //присваиваем переменные
+    $this->title=$title;
+    $this->desk=$desk;
+    $this->price=$price;
+    echo $this->getAll();
+}
+//Добавляем деструктор
+function __destruct()
+{
+    echo $this->title . "Добавлен в бд</br>";
+}
 }
 //Создаем обьект 1
-$tovar1 = new Product();
-$tovar1->title = "Товар 1 ";
-$tovar1->desk = "Описание 1 ";
-$tovar1->price = 150;
-
+$tovar1 = new Product('Товар1 ', 'Описание1 ', '150');
 //Создаем обьект 2
-$tovar2 = new Product();
-$tovar2->title = "Товар 2 ";
-$tovar2->desk = "Описание 2 ";
-$tovar2->price = 200;
-
-//Вывод
-echo $tovar1->title . $tovar1->desk . $tovar1->price;
-echo '<hr>';
-echo $tovar2->title . $tovar2->desk . $tovar2->price;
-
-
-
+$tovar2 = new Product('Товар2 ', 'Описание2 ', '200');
