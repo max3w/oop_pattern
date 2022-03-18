@@ -8,9 +8,9 @@
 class Product
 {
 //Наполняем значениями по умолчанию
-public $title = "Title";
-public $desk = "Desk";
-public $price = 100;
+public string $title = "Title";
+public string $desk = "Desk";
+public int $price = 100;
 
 //Функция вывода
 function getAll(){
