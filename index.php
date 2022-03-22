@@ -34,7 +34,7 @@ class Plus{
     {
         $a = $this->a;
         $b = $this->b;
-        $c = $a + $b;
+        $c = $a+$b;
         $e = 'Числа:'.$a.'+'.$b.'='.$c;
         return $e;
 
