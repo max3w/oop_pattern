@@ -2,16 +2,19 @@
 
 class Carcons
 {
-    const random = 0;
     public $brand;
     public $color;
     public $maxSpeed;
-    public $currentSpeed = 0;
+    public int $currentSpeed = 0;
+
+    //Зададим контстанту
+    const MAX_LIFT = 630; //обычно в конфигах
 
     //Добавим статическую переменную одна на весь класс
     public static int $_counterOfCars=0;
     //Статические методы исп. когда надо добавить что то не связаное с
     // методами а как надстройку
+
     public static function random(): Carcons
     {
         return new Carcons('Mycar', 'red', rand(200, 300));
@@ -20,6 +23,8 @@ class Carcons
         $this->brand=$brand;
         $this->color=$color;
         $this->maxSpeed=$maxSpeed;
+        //Подключаем константу
+        $this->max_lift=self::MAX_LIFT;
         //добавим счетчик машин через статическое свойство
        self::$_counterOfCars++;
     }
