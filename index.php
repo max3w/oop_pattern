@@ -23,7 +23,7 @@ class Person{
 
 class Plus{
     //свойства
-    private $a = '1'; //значение по умолчанию
+    private $a = '11'; //значение по умолчанию
     private $b = '2';
     //метод
 
